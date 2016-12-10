@@ -1,0 +1,48 @@
+Insert into AUTHOR values (‘001’, ’Abraham Silberschatz’)
+Insert into AUTHOR values (‘002’, ’Henry Korth’)
+Insert into AUTHOR values (‘003’, ’S. Sudarshan’)
+Insert into AUTHOR values (‘004’, ’Michael J. Hernandez’)
+Insert into AUTHOR values (‘005’, ’Nenad Jukic’)
+Insert into AUTHOR values (‘006’, ’Susan Vrbsky’)
+Insert into AUTHOR values (‘007’, ’Svetlozar Nestorov’)
+Insert into AUTHOR values (‘008’, ’zhe wang’)
+Insert into AUTHOR values (‘009’, ’zhe liu')
+Insert into AUTHOR values (‘010’, ’zhilin jing’)
+
+
+Insert into PUBLISHER values ('p01','McGraw-Hill, Inc','New York, NY, USA')
+Insert into PUBLISHER values ('p02','KiCam Projects','121 North Main Street Georgetown, Ohio')
+Insert into PUBLISHER values ('p03','Big O Publishing Group','431 Fifth Street Natchitoches, LA')
+Insert into PUBLISHER values ('p04','Air University Press','600 Chennault Circle, Building 1405 Maxwell AFB, Alabama')
+
+
+insert into BRANCH values ('b1','NewarkLibrary','01 newark ave, Newark')
+insert into BRANCH values ('b2','HarrisonLibrary','02 harrison ave, Harrison')
+insert into BRANCH values ('b3','KearnyLibrary','03 kearny ave, Kearny')
+
+
+insert into READER values ('31370001','','Lisa','011 newark ave, Newark')
+insert into READER values ('31370002','','Alex','012 newark ave, Newark')
+insert into READER values ('31370003','','Elisa','013 newark ave, Newark')
+insert into READER values ('31370004','','Luxes','014 newark ave, Newark')
+insert into READER values ('31370005','','Mark','015 newark ave, Newark')
+insert into READER values ('31370006','','Alice','021 harrison ave, Harrison')
+insert into READER values ('31370007','','Albert','022 harrison ave, Harrison')
+insert into READER values ('31370008','','Linda','023 harrison ave, Harrison')
+insert into READER values ('31370009','','Lily','024 harrison ave, Harrison')
+insert into READER values ('313700010','','Luke','025 harrison ave, Harrison')
+insert into READER values ('313700011','','Sheldon','026 harrison ave, Harrison')
+insert into READER values ('313700012','','May','027 harrison ave, Harrison')
+insert into READER values ('313700013','','Ada','028 harrison ave, Harrison')
+insert into READER values ('313700014','','Linlin','031 kearny ave, Kearny')
+insert into READER values ('313700015','','Amanda','032 kearny ave, Kearny')
+insert into READER values ('313700016','','Leo','033 kearny ave, Kearny')
+insert into READER values ('313700017','','Ketty','034 kearny ave, Kearny')
+
+
+insert into DOCUMENT values ('d001','Database Design','2012','p01')
+insert into DOCUMENT values ('d002','Database System','2013','p02')
+insert into DOCUMENT values ('d003','Data Mining','2011','p01')
+insert into DOCUMENT values ('d004','Introduction to Data Warehouses','2004','p03')
+insert into DOCUMENT values ('d005','Head first Java','2011','p02')
+	
