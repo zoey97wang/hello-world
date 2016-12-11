@@ -40,9 +40,9 @@ insert into READER values ('313700016','staff','Leo','033 kearny ave, Kearny')
 insert into READER values ('313700017','staff','Ketty','034 kearny ave, Kearny')
 
 
-insert into DOCUMENT values ('d001','Database Design','2012','p01')
-insert into DOCUMENT values ('d002','Database System','2013','p02')
-insert into DOCUMENT values ('d003','Data Mining','2011','p01')
-insert into DOCUMENT values ('d004','Introduction to Data Warehouses','2004','p03')
-insert into DOCUMENT values ('d005','Head first Java','2011','p02')
+insert into DOCUMENT values ('d001','Database Design',to_date('2012','yyyy'),'p01')
+insert into DOCUMENT values ('d002','Database System',to_date('2013','yyyy'),'p02')
+insert into DOCUMENT values ('d003','Data Mining',to_date('2012','yyyy'),'p01')
+insert into DOCUMENT values ('d004','Introduction to Data Warehouses',to_date('2002','yyyy'),'p03')
+insert into DOCUMENT values ('d005','Head first Java',to_date('2009','yyyy')','p02')
 	
