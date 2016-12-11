@@ -1,0 +1,22 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="reserve" %>
+<center>
+<b>Reserve Book</b>
+<hr>
+<hr>
+<FORM METHOD=POST ACTION="reserveresult">
+<tr><b>Please input DocumentID: </b></tr>
+<br>
+<INPUT TYPE=TEXT SIZE=24 MAXLENGTH=50 NAME="documentidforreserve">
+<br>
+<b>Please Confirm your ReaderID: </b>
+<br>
+<INPUT TYPE=TEXT SIZE=24 MAXLENGTH=50 NAME="readeridforreserve">
+<br>
+<INPUT type=SUBMIT value="reserve">
+</form>
+</center>
+
+<center>
+<a href='readerMenu'>Click Here to Go Back Reader Menu</a>
+</center>
