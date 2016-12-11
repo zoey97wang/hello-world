@@ -1,0 +1,29 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="reserveresult" %>
+<%@ plsql parameter="documentidforreserve" type="VARCHAR2" %>
+<%@ plsql parameter="readeridforreserve" type="VARCHAR2" %>
+<%! i integer := 0; %>
+<%! number integer :=0; %>
+<%! CURSOR copycursor is select * from copy where docid = documentidforreserve; %>
+<% for cc in copycursor loop %>
+<% if cc.position = 'null' then i :=1;%>
+<% end if; %>
+<% end loop; %>
+<center>
+<b>Reserve Result </b>
+<hr>
+<hr>
+<% if i=1 then %>
+
+<%= documentidforreserve %>
+<% else %>
+<b>No Available Document now!</b>
+<% end if; %>
+
+</center>
+
+<hr>
+<hr>
+<center>
+<a href="reserve">Click Here to Go Back Reserve Menu</a>
+</center>
