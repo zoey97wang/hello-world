@@ -1,0 +1,23 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="readerlogin3" %>
+<%@ plsql parameter="readeridinput" type="VARCHAR2" %>
+<%! i integer := 0; %>
+<%! CURSOR c is select * from READER; %>
+<% for c1 in c loop %>
+<% if c1.readerid = readeridinput then i :=1;%>
+<% end if; %>
+<% end loop; %>
+<% if i = 1 then %>
+<center>
+<br>Hello:</br>
+<%=readeridinput %>
+<hr>
+<table>
+<tr>
+</tr>
+</table>
+</center>
+<% else %>
+<br> Please input valid ReaderID: </br>
+<a href="readerMenu">readerMenu</a>
+<% end if; %>
