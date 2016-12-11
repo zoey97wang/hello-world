@@ -1,0 +1,49 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="readerlogin3" %>
+<%@ plsql parameter="readeridinput" type="VARCHAR2" %>
+<%! i integer := 0; %>
+<%! CURSOR c is select * from READER; %>
+<%! cursor r1 is select * from reserves where readerid = readeridinput; %>
+<% for c1 in c loop %>
+<% if c1.readerid = readeridinput then i :=1;%>
+<% end if; %>
+<% end loop; %>
+<% if i = 1 then %>
+<center>
+<b>Welcome! Reader: </b>
+<b><%=readeridinput %></b>
+<hr>
+<table>
+<tr>
+<a href="search">Search Document</a>
+</tr>
+<br>
+<tr>
+<a href="borrow">Borrow Document</a>
+</tr>
+<br>
+<tr>
+<a href="return">Return Document</a>
+</tr>
+<br>
+<tr>
+<a href="reserve">Reserve Document</a>
+</tr>
+<hr>
+<center>
+<b>Reserved Book Information:</b>
+<% for r in r1 loop %>
+<br>
+<b>DoumentId</b>
+<%= r.docid %>
+<br>
+<b>BranchId</b>
+<%= r.libid %>
+<br>
+<% end loop; %>
+</table>
+</center>
+<% else %>
+<b> Please input valid ReaderID: </b>
+<a href="readerMenu">readerMenu</a>
+<% end if; %>
