@@ -46,3 +46,27 @@ insert into DOCUMENT values ('d003','Data Mining',to_date('2012','yyyy'),'p01')
 insert into DOCUMENT values ('d004','Introduction to Data Warehouses',to_date('2002','yyyy'),'p03')
 insert into DOCUMENT values ('d005','Head first Java',to_date('2009','yyyy')','p02')
 	
+	
+select * from document
+select * from copy
+select * from PUBLISHER
+select * from reader
+select * from RESERVES
+
+Insert into PUBLISHER values ('p01','McGraw-Hill, Inc','New York, NY, USA')
+
+insert into DOCUMENT values('d001','Database Design',to_date('2012','yyyy'),'p01')
+insert into DOCUMENT values ('d002','Database System',to_date('2013','yyyy'),'p02')
+
+insert into COPY values('d001','c001','b1','null')
+insert into COPY values('d001','c002','b1','null')
+insert into COPY values('d002','c001','b1','reserve')
+
+update COPY set position='reserve' where copyno = 'c001'
+
+insert into BRANCH values ('b1','NewarkLibrary','01 newark ave, Newark')
+
+insert into reserves values ('1','31370001','d001','c001','b1',to_date('2016-12-1','yyyy-mm-dd'))
+
+select * from DOCUMENT
+Insert into PUBLISHER values ('p02','KiCam Projects','121 North Main Street Georgetown, Ohio')
