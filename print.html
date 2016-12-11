@@ -1,0 +1,32 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="print" %>
+<%! CURSOR pub is select * from publisher; %>
+
+<center>
+<b>PUBLISH INFORMATION:</b>
+<hr>
+<% for pub1 in pub loop %>
+<p><b>Publisher ID:</b>
+<%= pub1.publishid %></p>
+<b>Publisher Name:</b>
+<%= pub1.pubname %>
+<b>Publisher Address</b>
+<%= pub1.address %>
+<hr>
+<% end loop; %>
+</center>
+<hr>
+<center>
+<FORM METHOD=POST ACTION="printinfo">
+<TABLE BORDER=0 >
+<TR>
+<b>Please input the publishID</b>
+</TR>
+<TD>
+<INPUT TYPE=TEXT SIZE=24 MAXLENGTH=50 NAME="readerid">
+</TD>
+</table>
+<center>
+<INPUT type=SUBMIT value="SUBMIT">
+</center>
+</form>
