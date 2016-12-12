@@ -1,0 +1,20 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="searchresultbytitle" %>
+<%@ plsql parameter= "documenttitleforsearch" type="varchar2" %>
+<%! cursor doct is select * from document where title = documenttitleforsearch; %>
+<center>
+<b>Search Result</b>
+<hr>
+<hr>
+<% for doct1 in doct loop %>
+<b>Document ID: </b>
+<%= doct1.docid %>
+<b>Document Title: </b>
+<%= doct1.title %>
+<b>Document's PublisherID: </b>
+<%= doct1.publisherid %>
+<hr>
+<% end loop; %>
+<hr>
+<hr><a href="search">Click Here To Go Back Search Menu</a>
+</center>
