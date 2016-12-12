@@ -1,0 +1,28 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="returnresult" %>
+<%@ plsql parameter="documentidforreturn" type="VARCHAR2" %>
+<%@ plsql parameter="readeridforreturn" type="VARCHAR2" %>
+<%! i integer := 0; %>
+<%! CURSOR borcursor is select * from borrows; %>
+<% for bc2 in borcursor loop %>
+<% if bc2.docid = documentidforreturn and bc2.readerid = readeridforreturn then i :=1;%>
+<% end if; %>
+<% end loop; %>
+
+<center>
+<b>Return Result </b>
+<hr>
+<hr>
+<% if i=1 then %>
+<b>Returned Document: </b>
+<%= documentidforreturn %>
+<% else %>
+<b>Please Input Correct DocumentID and ReaderID!</b>
+<% end if; %>
+</center>
+
+<hr>
+<hr>
+<center>
+<a href="return1">Click Here to Go Back Return Menu</a>
+</center>
