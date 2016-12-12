@@ -70,3 +70,19 @@ insert into reserves values ('1','31370001','d001','c001','b1',to_date('2016-12-
 
 select * from DOCUMENT
 Insert into PUBLISHER values ('p02','KiCam Projects','121 North Main Street Georgetown, Ohio')
+
+
+
+
+create sequence num_seq START WITH 11
+
+
+CREATE OR REPLACE TRIGGER num_bir 
+BEFORE INSERT ON testforlib 
+FOR EACH ROW
+BEGIN
+SELECT num_seq.nextval
+into :new.num
+from dual;
+end;
+
