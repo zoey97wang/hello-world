@@ -1,0 +1,27 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="printinfo" %>
+<%@ plsql parameter= "publisheridinput" type="varchar2" %>
+<%! cursor doc is select * from document; %>
+<center>
+<b>Information of Document Publish by
+</b>
+<%= publisheridinput %>
+<hr>
+<hr>
+</center>
+<% for doc1 in doc loop %>
+<% if doc1.publisherid = publisheridinput then %>
+<center>
+<b>Document ID: </b>
+<%= doc1.docid %>
+<b>Document Title: </b>
+<%= doc1.title %>
+<b>Document's PublisherID: </b>
+<%= doc1.publisherid %>
+<hr>
+<%end if; %>
+
+<% end loop; %>
+<hr>
+<a href="readerMenu">Click Here To Go Back Reader Menu</a>
+</center>
