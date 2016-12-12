@@ -1,8 +1,18 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="readerlogin3" %>
+<%@ plsql parameter="readeridinput" type="VARCHAR2" %>
+<%! i integer := 0; %>
+<%! CURSOR c is select * from READER; %>
 <%! cursor r1 is select * from reserves where readerid = readeridinput; %>
 <% for c1 in c loop %>
 <% if c1.readerid = readeridinput then i :=1;%>
 <% end if; %>
 <% end loop; %>
+<center>
+<b>Welcome To CITY Library</b>
+</center>
+<hr>
+<hr>
 <% if i = 1 then %>
 <center>
 <b>Welcome! Reader: </b>
