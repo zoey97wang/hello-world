@@ -1,0 +1,23 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="borrow" %>
+<center>
+<b>Borrow Book</b>
+<hr>
+<hr>
+<FORM METHOD=POST ACTION="borrowresult">
+<tr><b>Please input DocumentID: </b></tr>
+<br>
+<INPUT TYPE=TEXT SIZE=24 MAXLENGTH=50 NAME="documentidforborrow">
+<br>
+<b>Please Confirm your ReaderID: </b>
+<br>
+<INPUT TYPE=TEXT SIZE=24 MAXLENGTH=50 NAME="readeridforborrow">
+<br>
+<INPUT type=SUBMIT value="Borrow">
+</form>
+</center>
+<hr>
+<hr>
+<center>
+<a href='readerMenu'>Click Here to Go Back Reader Menu</a>
+</center>
