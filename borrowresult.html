@@ -1,0 +1,30 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="borrowresult" %>
+<%@ plsql parameter="documentidforborrow" type="VARCHAR2" %>
+<%@ plsql parameter="readeridforborrow" type="VARCHAR2" %>
+<%! i integer := 0; %>
+<%! number integer :=0; %>
+<%! CURSOR copycursor2 is select * from copy where docid = documentidforborrow; %>
+<% for cc2 in copycursor2 loop %>
+<% if cc2.position = 'null' then i :=1;%>
+<% end if; %>
+<% end loop; %>
+
+<center>
+<b>Borrow Result </b>
+<hr>
+<hr>
+
+<% if i=1 then %>
+<b>Borrowed Document: </b>
+<%= documentidforborrow %>
+
+<% else %>
+<b>No Available Document now!</b>
+<% end if; %>
+</center>
+<hr>
+<hr>
+
+
+<center>
