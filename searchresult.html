@@ -1,0 +1,21 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="searchresult" %>
+<%@ plsql parameter= "documentidforsearch" type="varchar2" %>
+<%! cursor doc2 is select * from document where docid = documentidforsearch; %>
+<center>
+<b>Search Result</b>
+<hr>
+<hr>
+<% for doc3 in doc2 loop %>
+<b>Document ID: </b>
+<%= doc3.docid %>
+<b>Document Title: </b>
+<%= doc3.title %>
+<b>Document's PublisherID: </b>
+<%= doc3.publisherid %>
+<hr>
+<% end loop; %>
+<hr>
+<hr>
+<a href="readerMenu">Click Here To Go Back Reader Menu</a>
+</center>
