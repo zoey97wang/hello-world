@@ -1,3 +1,6 @@
+afsconnect1-52 ~ >: loadpsp -replace -user CS632S103_028/plunks52@course.njit.edu reserveresult.psp
+"reserveresult.psp": procedure "reserveresult" created.
+afsconnect1-53 ~ >: vi reserveresult.psp
 <%@ page language="PL/SQL" %>
 <%@ plsql procedure="reserveresult" %>
 <%@ plsql parameter="documentidforreserve" type="VARCHAR2" %>
@@ -14,8 +17,11 @@
 <hr>
 <hr>
 <% if i=1 then %>
-<b>Reserved Document: </b>
+<% INSERT INTO reserves (readerid, docid, dtime )
+values (readeridforreserve, documentidforreserve, SYSDATE ); %>
+<b>Reserved document:</b>
 <%= documentidforreserve %>
+
 <% else %>
 <b>No Available Document now!</b>
 <% end if; %>
