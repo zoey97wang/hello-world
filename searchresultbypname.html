@@ -1,0 +1,21 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="searchresultbypname" %>
+<%@ plsql parameter= "pnameforsearch" type="varchar2" %>
+<%! cursor docp is select * from document where PUBLISHERID = pnameforsearch; %>
+<center>
+<b>Search Result</b>
+<hr>
+<hr>
+<% for docp1 in docp loop %>
+<b>Document ID: </b>
+<%= docp1.docid %>
+<b>Document Title: </b>
+<%= docp1.title %>
+<b>Document's PublisherID: </b>
+<%= docp1.publisherid %>
+<hr>
+<% end loop; %>
+<hr>
+<hr><a href="search">Click Here To Go Back Search Menu</a>
+</center>
+~
